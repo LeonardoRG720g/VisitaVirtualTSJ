@@ -1,0 +1,4335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Visita Virtual</title>
+    <!--
+    <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+    -->
+
+    <link rel="stylesheet" href="pannellum/pannellum.css"/>
+    <script type="text/javascript" src="pannellum/pannellum.js"></script>
+
+    <style>
+    #panorama {
+        /**/
+        /*Tamaño del viewport*/
+        width: 100%;
+        height: 97vh;
+    }
+    </style>
+</head>
+<body>
+
+<div id="panorama"></div>
+
+<script>
+// Create viewer
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "Exterior_entrada",
+        "title": "Tecnólogico Superior de Jalisco UA Zapopan",
+        "author": "Leonardo Rodriguez Garcia",
+        "autoRotate": -2,
+        "showControls": true,
+        "sceneFadeDuration": 1000,
+        "compass" : false
+    },
+
+    "scenes": {
+        "Exterior_entrada": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Entrada.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_entrada2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                    
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "indice",
+                    "sceneId": "indice",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                    
+                }
+            ]
+        },
+        "Exterior_entrada2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Entrada2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 230,
+                    "type": "scene",
+                    "sceneId": "Exterior_entrada",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor7",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 363,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento",
+                    "targetPitch": 0,
+                    "targetYaw": 40
+                }
+                
+            ]
+        },
+        "Exterior_Estacionamiento": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Estacionamiento.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 220,
+                    "type": "scene",
+                    "sceneId": "Exterior_entrada2",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 295,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectromecanica",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 40,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento2",
+                    "targetPitch": 0,
+                    "targetYaw": 39
+                }
+                
+            ]
+        },
+        "Exterior_Estacionamiento2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Estacionamiento2.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 215,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento",
+                    "targetPitch": 0,
+                    "targetYaw": 200
+                },
+                {
+                    "pitch": 1,
+                    "yaw": 310,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 35,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_Estacionamiento3": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Estacionamiento3.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 170,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento2",
+                    "targetPitch": 0,
+                    "targetYaw": 200
+                },
+                {
+                    "pitch": 1,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento4",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 330,
+                    "type": "scene",
+                    "sceneId": "Exterior_PasilloDomo",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_Estacionamiento4": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Estacionamiento4.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 170,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 350,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetPitch": 0,
+                    "targetYaw": 270
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCancha_1": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCancha_1.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -4,
+                    "yaw": 58,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_2",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                
+            ]
+        },
+        "Exterior_CorredorCancha_2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCancha_2.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 185,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2,
+                    "yaw": 5,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_1",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCancha_3": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCancha_3.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_4",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_2",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCancha_4": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCancha_4.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_5",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 258,
+                    "type": "scene",
+                    "text" : "text",
+                    "sceneId": "Exterior_CorredorCanchaBastquet",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCancha_5": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCancha_5.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 228,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_4",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "info",
+                    "text" : "Cancha Futbol",
+                    //"sceneId": "Exterior_CanchaFutbol",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_CanchaFutbol": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CanchaFutbol.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 10,
+                    "type": "scene",
+                    "sceneId": "PasilloDomo2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_CanchaBasquet": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CanchaBasquet.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 150,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCanchaBastquet",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCanchaBastquet": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCanchaBastquet.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_4",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_CanchaBasquet",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_CorredorCanchaBastquet2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorCanchaBastquet2.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 10,
+                    "type": "scene",
+                    "sceneId": "PasilloDomo2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_CorredorAtrasDomo": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorAtrasDomo.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 10,
+                    "type": "scene",
+                    "sceneId": "PasilloDomo2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_PasilloDomo": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_PasilloDomo.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento3",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 10,
+                    "type": "scene",
+                    "sceneId": "Exterior_PasilloDomo2",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_PasilloDomo2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_PasilloDomo2.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 185,
+                    "type": "scene",
+                    "sceneId": "Exterior_PasilloDomo",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 25,
+                    "type": "scene",
+                    "sceneId": "Domo",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 345,
+                    "type": "scene",
+                    "sceneId": "Domo",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+                
+            ]
+        },
+        "Exterior_CalleEdificio_O": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CalleEdificio_O.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor1",
+                    "targetPitch": 0,
+                    "targetYaw": 20
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 355,
+                    "type": "scene",
+                    "text": "Laboratorio Quimica",
+                    "sceneId": "Edificio_O_Quimica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 47,
+                    "type": "scene",
+                    "text": "Redi",
+                    "sceneId": "Edificio_O_Redi",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 10,
+                    "yaw": 7,
+                    "type": "scene",
+                    "text": "Laboratorio de Computo",
+                    "sceneId": "Edificio_O_Computo",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 17,
+                    "yaw": 331,
+                    "type": "scene",
+                    "text": "Aula 01",
+                    "sceneId": "Edificio_O_A1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 20,
+                    "yaw": 355,
+                    "type": "scene",
+                    "text": "Aula 02",
+                    "sceneId": "Edificio_O_A2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 18,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Aula 03",
+                    "sceneId": "Edificio_O_A3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 15,
+                    "yaw": 45,
+                    "type": "scene",
+                    "text": "Aula 05",
+                    "sceneId": "Edificio_O_A5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 5,
+                    "yaw": 63,
+                    "type": "scene",
+                    "text": "Aula 06",
+                    "sceneId": "Edificio_O_A6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 8,
+                    "yaw": 45,
+                    "type": "scene",
+                    "text": "Aula 08",
+                    "sceneId": "Edificio_O_A8",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 95,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento4",
+                    "targetPitch": 0,
+                    "targetYaw": 190
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 300,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorCancha_1",
+                    "targetPitch": 0,
+                    "targetYaw": 50
+                }
+                
+            ]
+        },
+        "Exterior_Corredor1": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor1.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 90,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorSistemas",
+                    "targetPitch": 0,
+                    "targetYaw": -80
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 280,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectronica",
+                    "targetPitch": 0,
+                    "targetYaw": -80
+                }
+                
+            ]
+        },
+        "Exterior_CorredorElectronica": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorElectronica.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 360,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor4",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 280,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor2",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 110,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor1",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                }
+                
+            ]
+        },
+        "Exterior_Corredor2": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor2.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento2",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 10,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectronica",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                }
+                
+            ]
+        },
+        "Exterior_CorredorSistemas": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorSistemas.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor3",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 85,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor1",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 12,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorPosgrados",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                }
+            ]
+        },
+        "Exterior_CorredorPosgrados": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorPosgrados.webp",
+            "hotSpots": [
+                {
+                    "pitch": 358,
+                    "yaw": 80,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorSistemas",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 360,
+                    "type": "scene",
+                    "text": "Posgrados",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_Corredor3": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor3.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 185,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorSistemas",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorIndustrial",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                }
+                
+            ]
+        },
+        "Exterior_CorredorIndustrial": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorIndustrial.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 140,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor5",
+                    "targetPitch": 0,
+                    "targetYaw": 160
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 77,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor4",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 360,
+                    "type": "scene",
+                    "text": "Industrial",
+                    "sceneId": "Industrial_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor3",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                }
+                
+            ]
+        },
+        "Exterior_Corredor4": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor4.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 188,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor5",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": -1,
+                    "yaw": 67,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectromecanica",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": 2,
+                    "yaw": 267,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorIndustrial",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 360,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectronica",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_Corredor5": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor5.webp",
+            "hotSpots": [
+                {
+                    "pitch": 1,
+                    "yaw": 148,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorBasicas",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 60,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor4",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 355,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorIndustrial",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                }
+                
+            ]
+        },
+        "Exterior_CorredorBasicas": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorBasicas.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 2,
+                    "type": "scene",
+                    "text": "Basicas",
+                    "sceneId": "Basicas_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -1,
+                    "yaw": 82,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor6",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": 2,
+                    "yaw": 300,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor5",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                
+                
+            ]
+        },
+        "Exterior_Corredor6": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor6.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 237,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor7",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 140,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorBasicas",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                }
+                
+            ]
+        },
+        "Exterior_Corredor7": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Corredor7.webp",
+            "hotSpots": [
+                {
+                    "pitch": 1,
+                    "yaw": 350,
+                    "type": "scene",
+                    "sceneId": "Exterior_entrada2",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 80,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor6",
+                    "targetPitch": 0,
+                    "targetYaw": 20
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 200,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectromecanica",
+                    "targetPitch": 0,
+                    "targetYaw": 180
+                }
+                
+            ]
+        },
+        "Exterior_CorredorElectromecanica": {
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 0,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_CorredorElectromecanica.webp",
+            "hotSpots": [
+                {
+                    "pitch": 2,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "Electromecanica",
+                    "sceneId": "Electromecanica_PlantaBaja",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 120,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor4",
+                    "targetPitch": 0,
+                    "targetYaw": -90
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 350,
+                    "type": "scene",
+                    "sceneId": "Exterior_Corredor7",
+                    "targetPitch": 0,
+                    "targetYaw": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 258,
+                    "type": "scene",
+                    "sceneId": "Exterior_Estacionamiento",
+                    "targetPitch": 0,
+                    "targetYaw": 90
+                }
+                
+                
+            ]
+        },
+        "indice": {
+            "title": "Indice",
+            "hfov": 120,
+            "pitch": -3,/*Coordenada "Y" en grados*/
+            "yaw": 117,/*Coordenada "X" en grados*/
+            "type": "equirectangular",
+            "panorama": "resources/images/Exterior/Exterior_Entrada.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Sistemas",
+                    "sceneId": "Sistemas_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 15,
+                    "type": "scene",
+                    "text": "Posgrados",
+                    "sceneId": "Posgrados_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Electronica",
+                    "sceneId": "Electronica_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 45,
+                    "type": "scene",
+                    "text": "Industrial",
+                    "sceneId": "Industrial_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 60,
+                    "type": "scene",
+                    "text": "Electromecanica",
+                    "sceneId": "Electromecanica_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 75,
+                    "type": "scene",
+                    "text": "Basicas",
+                    "sceneId": "Basicas_PlantaBaja"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 90,
+                    "type": "scene",
+                    "text": "Edificio O",
+                    "sceneId": "Exterior_CalleEdificio_O"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 105,
+                    "type": "scene",
+                    "text": "Domo",
+                    "sceneId": "Domo"
+                }
+                
+            ]
+        },
+        /*----------Sistemas----------------------------------------------------------------------------------------------------*/
+        /*Sistemas-PlantaBaja*/
+        "Sistemas_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "Biblioteca",
+                    "sceneId": "Sistemas_Biblioteca",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Laboratorio Workstation IBM(LWI)",
+                    "sceneId": "Sistemas_LWI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 240,
+                    "type": "scene",
+                    "text": "Planta alta",
+                    "sceneId": "Sistemas_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 330,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorSistemas"
+                }
+            ]
+        },
+        
+        "Sistemas_Biblioteca": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_Biblioteca.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta baja",
+                    "sceneId": "Sistemas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 325,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Sistemas_Biblioteca2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_Biblioteca2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_Biblioteca3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_Biblioteca3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 150,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_Biblioteca4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_Biblioteca4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 135,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 225,
+                    "type": "scene",
+                    "sceneId": "Sistemas_Biblioteca3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LWI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LWI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 210,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        /*Sistemas-PlantaAlta*/
+        "Sistemas_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 350,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Sistemas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 177,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "info",
+                    "text": "Mantenimiento y Telecomunicaciones",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 285,
+                    "type": "info",
+                    "text": "Sala de Maestros",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Laboratorio de Redes(LRD)",
+                    "sceneId": "Sistemas_LRD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 155,
+                    "type": "info",
+                    "text": "Encargado de Laboratorio de Sistemas",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_PlantaAlta2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_PlantaAlta2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 332,
+                    "type": "scene",
+                    "text": "Laboratorio de Inteligencia Artificial(LIA)",
+                    "sceneId": "Sistemas_LIA",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 43,
+                    "type": "scene",
+                    "text": "Laboratorio de Tecnologias de la Informacion(LTI)",
+                    "sceneId": "Sistemas_LTI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 213,
+                    "type": "scene",
+                    "text": "Laboratorio de Tecnologias Emergentes(LTE)",
+                    "sceneId": "Sistemas_LTE",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": "Laboratorio de Desarrollo de Software(LDS)",
+                    "sceneId": "Sistemas_LDS",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "Laboratorio de Ingenieria de Software(LIS)",
+                    "sceneId": "Sistemas_LIS",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },{
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "info",
+                    "text": "Jefatura de Division de Sistemas Computacionales",
+                    "sceneId": "Sistemas_Jefatura",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Sistemas_LRD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LRD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 293,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LIA": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LIA.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 127,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LTI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LTI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 127,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LTE": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LTE.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 314,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LDS": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LDS.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 127,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Sistemas_LIS": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Sistemas/Sistemas_LIS.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 50,
+                    "type": "scene",
+                    "sceneId": "Sistemas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        /*----------Posgrados----------------------------------------------------------------------------------------------------*/
+        "Posgrados_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 35,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 320,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "Planta Alta",
+                    "sceneId": "Posgrados_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorPosgrados"
+                }
+            ]
+        },
+        "Posgrados_PlantaBaja_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_PlantaBaja_CD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 3,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 353,
+                    "type": "scene",
+                    "text": "Aula P1",
+                    "sceneId": "Posgrados_AulaP1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 336,
+                    "type": "scene",
+                    "text": "Aula P2",
+                    "sceneId": "Posgrados_AulaP2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 151,
+                    "type": "scene",
+                    "text": "Aula P3",
+                    "sceneId": "Posgrados_AulaP3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 210,
+                    "type": "scene",
+                    "text": "Aula P4",
+                    "sceneId": "Posgrados_AulaP4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 125,
+                    "type": "scene",
+                    "text": "Aula P5",
+                    "sceneId": "Posgrados_AulaP5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Posgrados_PlantaBaja_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_PlantaBaja_CI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 153,
+                    "type": "info",
+                    "text": "Investigacion",
+                    //"sceneId": "Posgrados_Investigacion",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 195,
+                    "type": "info",
+                    "text": "Consultorio Medico",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 333,
+                    "type": "scene",
+                    "text": "Aula P6",
+                    "sceneId": "Posgrados_AulaP6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 206,
+                    "type": "scene",
+                    "text": "Aula P7",
+                    "sceneId": "Posgrados_AulaP7",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Posgrados_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "text": "Direccion",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -7,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 205,
+                    "type": "scene",
+                    "text": "Aula P8",
+                    "sceneId": "Posgrados_AulaP8",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_PlantaAlta_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_PlantaAlta_CI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 330,
+                    "type": "scene",
+                    "text": "Aula P9",
+                    "sceneId": "Posgrados_AulaP9",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 205,
+                    "type": "scene",
+                    "text": "Aula P10",
+                    "sceneId": "Posgrados_AulaP10",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 156,
+                    "type": "scene",
+                    "text": "Aula P11",
+                    "sceneId": "Posgrados_AulaP11",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Aula P12",
+                    "sceneId": "Posgrados_AulaP12",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 60,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 250,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        ,
+        "Posgrados_AulaP3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 66,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP5.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 66,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP6.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 66,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP7": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP7.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 60,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP8": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP8.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP9": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP9.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 235,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP10": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP10.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 66,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP11": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP11.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 305,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Posgrados_AulaP12": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Posgrados/Posgrados_AulaP12.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 66,
+                    "type": "scene",
+                    "sceneId": "Posgrados_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        /*----------Electronica----------------------------------------------------------------------------------------------------*/
+        "Electronica_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 315,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },{
+                    "pitch": -0.6,
+                    "yaw": 135,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 55,
+                    "type": "scene",
+                    "text": "Planta alta",
+                    "sceneId": "Electronica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 223,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectronica"
+                }
+            ]
+        },
+        "Electronica_PlantaBaja_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_PlantaBaja_CD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 2,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 353,
+                    "type": "scene",
+                    "text": "Aula A1",
+                    "sceneId": "Electronica_AulaA1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 335,
+                    "type": "scene",
+                    "text": "Aula A2",
+                    "sceneId": "Electronica_AulaA2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 205,
+                    "type": "scene",
+                    "text": "Aula A3",
+                    "sceneId": "Electronica_AulaA3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 34,
+                    "type": "scene",
+                    "text": "Aula A4",
+                    "sceneId": "Electronica_AulaA4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 157,
+                    "type": "scene",
+                    "text": "Aula A5",
+                    "sceneId": "Electronica_AulaA5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_PlantaBaja_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_PlantaBaja_CI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 3,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 342,
+                    "type": "scene",
+                    "text": "Aula A6",
+                    "sceneId": "Electronica_AulaA6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 216,
+                    "type": "scene",
+                    "text": "Aula A7",
+                    "sceneId": "Electronica_AulaA7",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 150,
+                    "type": "scene",
+                    "text": "Aula A8",
+                    "sceneId": "Electronica_AulaA8",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 25,
+                    "type": "scene",
+                    "text": "Aula A9",
+                    "sceneId": "Electronica_AulaA9",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 80,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "text": "Promocion",
+                    "sceneId": "Electronica_Promocion",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 178,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaAlta2",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                }
+            ]
+        },
+        "Electronica_PlantaAlta2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_PlantaAlta2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Laboratorio de Electronica Analogica(LEA)",
+                    "sceneId": "Electronica_LEA",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 312,
+                    "type": "scene",
+                    "text": "Laboratorio de Electronica e Instrumentacion",
+                    "sceneId": "Electronica_LI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 335,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaAlta",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                }
+            ]
+        },
+        "Electronica_AulaA1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 67,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA5.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 300,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA6.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 243,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA7": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA7.webp",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA8": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA8.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_AulaA9": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_AulaA9.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_LEA": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_LEA.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 320,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_LI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_LI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -3,
+                    "yaw": 55,
+                    "type": "scene",
+                    "sceneId": "Electronica_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electronica_Promocion": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electronica/Electronica_Promocion.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "sceneId": "Electronica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        
+        /*----------Industrial----------------------------------------------------------------------------------------------------*/
+        "Industrial_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2.1,
+                    "yaw": 243,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CI"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 63,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CD"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 150,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorIndustrial"
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 348,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaAlta"
+                }
+            ]
+        },
+        "Industrial_PlantaBaja_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_PlantaBaja_CI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 336,
+                    "type": "scene",
+                    "text": "Aula I1",
+                    "sceneId": "Industrial_AulaI1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 207,
+                    "type": "scene",
+                    "text": "Aula I2",
+                    "sceneId": "Industrial_AulaI2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 153,
+                    "type": "scene",
+                    "text": "Aula I3",
+                    "sceneId": "Industrial_AulaI3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "Aula I4",
+                    "sceneId": "Industrial_AulaI4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja"
+                }
+            ]
+        },
+        "Industrial_PlantaBaja_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_PlantaBaja_CD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 330,
+                    "type": "scene",
+                    "text": "Aula I5",
+                    "sceneId": "Industrial_AulaI5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": "Auditorio",
+                    "sceneId": "Industrial_Auditorio",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 207,
+                    "type": "info",
+                    "text": "Laboratorio de Metodos de Ing.Industrial(LMEI)",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja"
+                }
+            ]
+        },
+        "Industrial_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 318,
+                    "type": "scene",
+                    "text": "Aula I6",
+                    "sceneId": "Industrial_AulaI6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 340,
+                    "type": "info",
+                    "text": "Jefatura Industrial",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 158,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 60,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Industrial_PlantaAlta2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_PlantaAlta2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 350,
+                    "type": "scene",
+                    "text": "Laboratorio de Computo(LC1)",
+                    "sceneId": "Industrial_LC1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 220,
+                    "type": "scene",
+                    "text": "Laboratorio de Computo(LC2)",
+                    "sceneId": "Industrial_LC2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 43,
+                    "type": "info",
+                    //"type": "scene",
+                    "text": "Laboratorio de Idiomas",
+                    //"sceneId": "Industrial_Idiomas",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "info",
+                    //"type": "scene ",
+                    "text": "Laboratorio de Cocteleria(LC)",
+                    //"sceneId": "Industrial_LC",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Industrial_AulaI1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 67,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_AulaI2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 57,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_AulaI3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_AulaI4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 120,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_AulaI5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI5.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 236,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_Auditorio": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_Auditorio.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 290,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_AulaI6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_AulaI6.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 325,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_LC1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_LC1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    //"type": "scene",
+                    //"sceneId": "Industrial_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_LC2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_LC2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 221,
+                    "type": "scene",
+                    "sceneId": "Industrial_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_Idiomas": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_Idiomas.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "sceneId": "Industrial_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Industrial_LC": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Industrial/Industrial_LC.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "sceneId": "Industrial_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        /*----------Electromecanica----------------------------------------------------------------------------------------------------*/
+        /*Electromecanica-PlantaBaja*/
+        "Electromecanica_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 150 ,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 220,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorElectromecanica"
+                }
+            ]
+        },
+        "Electromecanica_PlantaBaja_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaBaja_CI.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 170,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 60,
+                    "type": "scene",
+                    "text": "Laboratorio Manufactura(SIM)/CNC(LMAC)/Torno Convencional(LMATO)/Soldadura(LMAS)",
+                    "sceneId": "Electromecanica_Lab_LMAS_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 210,
+                    "type": "scene",
+                    "text": "Aula M3",
+                    "sceneId": "Electromecanica_AulaM3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 330,
+                    "type": "info",
+                    "text": "Almacen",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_PlantaBaja_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaBaja_CD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 15,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 226,
+                    "type": "scene",
+                    "text": "Aula M1",
+                    "sceneId": "Electromecanica_AulaM1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 350,
+                    "type": "scene",
+                    "text": "Aula M2",
+                    "sceneId": "Electromecanica_AulaM2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 200,
+                    "type": "info",
+                    "text": "Sala de Maestros Electromecanica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 50,
+                    "type": "scene",
+                    "text": "Laboratorio de Controles Electricos/4.0/Hidraulica y Neumatica/Prototipado 3D",
+                    "sceneId": "Electromecanica_Lab_Hidraulica_Neumatica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta alta",
+                    "sceneId": "Electromecanica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 353,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta_CI",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 175,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta_CD",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 250,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },{
+                    "pitch": -0.6,
+                    "yaw": 330,
+                    "type": "info",
+                    //"type": "scene",
+                    "text": "Aula M5",
+                    //"sceneId": "Electromecanica_AulaM5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 210,
+                    //"type": "scene",
+                    "type": "info",
+                    "text": "Laboratorio de Computo de Electromecanica(LCE)",
+                    //"sceneId": "Electromecanica_LCE",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_PlantaAlta_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaAlta_CI.webp",
+            "hotSpots": [
+                
+                {
+                    "pitch": -0.6,
+                    "yaw": 40,
+                    "type": "scene",
+                    "text": "Aula M6",
+                    "sceneId": "Electromecanica_AulaM6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 163,
+                    "type": "scene",
+                    "text": "Aula M7",
+                    "sceneId": "Electromecanica_AulaM7",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "info",
+                    "text": "Oficina de Sindicato",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 5,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Electromecanica_PlantaAlta_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_PlantaAlta_CD.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw":212,
+                    "type": "scene",
+                    "text": "Aula M4",
+                    "sceneId": "Electromecanica_AulaM4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 199,
+                    "type": "info",
+                    "text": "Jefatura de Division de Electromecanica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+            ]
+        },
+        "Electromecanica_Manufactura": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Manufactura.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 10,
+                    "type": "scene",
+                    "text": "Laboratorio de Robotica e Industria 4.0",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_LMAS_1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_LMAS_1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 135,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_LMAS_2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_LMAS_2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 315,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_LMAS_3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_LMAS_3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 240,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 225,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_LMAS_4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_LMAS_4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 33,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 325,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_LMAS_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_Hidraulica_Neumatica": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_Hidraulica_Neumatica.webp",
+            "hotSpots": [
+            {
+                    "pitch": -6,
+                    "yaw": 165,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 60,
+                    "type": "scene",
+                    "text": "Laboratorio de Robotica e Industria 4.0",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_Robotica_Ind4_1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_Robotica_Ind4_1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 295,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_Hidraulica_Neumatica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 323,
+                    "type": "scene",
+                    "text": "3",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "2",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 280,
+                    "type": "scene",
+                    "text": "4",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_Robotica_Ind4_2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_Robotica_Ind4_2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 20,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_Hidraulica_Neumatica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 30,
+                    "type": "scene",
+                    "text": "3",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 320,
+                    "type": "scene",
+                    "text": "4",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "1",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_Robotica_Ind4_3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_Robotica_Ind4_3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 20,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_Hidraulica_Neumatica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 357,
+                    "type": "scene",
+                    "text": "4",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 250,
+                    "type": "scene",
+                    "text": "2",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 300,
+                    "type": "scene",
+                    "text": "1",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Lab_Robotica_Ind4_4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Lab_Robotica_Ind4_4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_Lab_Hidraulica_Neumatica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 160,
+                    "type": "scene",
+                    "text": "3",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 196,
+                    "type": "scene",
+                    "text": "2",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 270,
+                    "type": "scene",
+                    "text": "1",
+                    "sceneId": "Electromecanica_Lab_Robotica_Ind4_1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_LCE": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_LCE.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Alta",
+                    "sceneId": "Electromecanica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM7": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM7.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 120,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM6.webp",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 120,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM5.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Alta",
+                    "sceneId": "Electromecanica_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 235,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaAlta_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_AulaM1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_AulaM1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 70,
+                    "type": "scene",
+                    "sceneId": "Electromecanica_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Electromecanica_Manufactura": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Electromecanica/Electromecanica_Manufactura.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Electromecanica_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        /*----------Basicas----------------------------------------------------------------------------------------------------*/
+        "Basicas_PlantaBaja": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_PlantaBaja.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 12,
+                    "type": "scene",
+                    "text": "Planta Alta",
+                    "sceneId": "Basicas_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 270,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 180,
+                    "type": "scene",
+                    "sceneId": "Exterior_CorredorBasicas"
+                }
+            ]
+        },
+        "Basicas_PlantaBaja_CD": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_PlantaBaja_CD.webp",
+            "hotSpots": [
+            {
+                    "pitch": -0.6,
+                    "yaw": 353,
+                    "type": "scene",
+                    "text": "Aula CB5",
+                    "sceneId": "Basicas_AulaCB5",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 206,
+                    "type": "scene",
+                    "text": "Aula CB6",
+                    "sceneId": "Basicas_AulaCB6",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 331,
+                    "type": "scene",
+                    "text": "Laboratorio de Fisica",
+                    "sceneId": "Basicas_Fisica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 145,
+                    "type": "scene",
+                    "text": "Laboratorio de Quimica",
+                    "sceneId": "Basicas_Quimica",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 195,
+                    "type": "info",
+                    "text": "Sala de maestros Basicas",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 2,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+                
+            ]
+        },
+        "Basicas_PlantaBaja_CI": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_PlantaBaja_CI.webp",
+            "hotSpots": [
+            {
+                    "pitch": -0.6,
+                    "yaw": 344,
+                    "type": "scene",
+                    "text": "Aula CB1",
+                    "sceneId": "Basicas_AulaCB1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 215,
+                    "type": "scene",
+                    "text": "Aula CB2",
+                    "sceneId": "Basicas_AulaCB2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "Aula CB3",
+                    "sceneId": "Basicas_AulaCB3",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 101,
+                    "type": "scene",
+                    "text": "Aula CB4",
+                    "sceneId": "Basicas_AulaCB4",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_PlantaAlta": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_PlantaAlta.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "info",
+                    "text": "Control Escolar",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 80,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Basicas_PlantaBaja",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 178,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_PlantaAlta2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_PlantaAlta2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 350,
+                    "type": "scene",
+                    "text": "Aula CB7",
+                    "sceneId": "Basicas_AulaCB7",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 330,
+                    "type": "scene",
+                    "text": "Aula CB8",
+                    "sceneId": "Basicas_AulaCB8",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 203,
+                    "type": "scene",
+                    "text": "Aula CB9",
+                    "sceneId": "Basicas_AulaCB9",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 155,
+                    "type": "scene",
+                    "text": "Aula CB10",
+                    "sceneId": "Basicas_AulaCB10",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 130,
+                    "type": "scene",
+                    "text": "Aula CB11",
+                    "sceneId": "Basicas_AulaCB11",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Planta Baja",
+                    "sceneId": "Basicas_PlantaAlta",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB1": {
+            "hfov": 120,
+            "yaw": 180,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 230,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 227,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 295,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB4": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB4.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 222,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CI",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB5.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 58,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CD",
+                    "targetYaw": 0,
+                    "targetPitch": 0
+                }
+            ]
+        },
+        "Basicas_AulaCB6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB6.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 59,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB7": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB7.webp",
+            "hotSpots": [
+                {
+                    "pitch": -3,
+                    "yaw": 63,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB8": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB8.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 242,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB9": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB9.webp",
+            "hotSpots": [
+                {
+                    "pitch": -3,
+                    "yaw": 60,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB10": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB10.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 285,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_AulaCB11": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_AulaCB11.webp",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 258,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaAlta2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_Fisica": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_Fisica.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 331,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Basicas_Quimica": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Basicas/Basicas_Quimica.webp",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 311,
+                    "type": "scene",
+                    "sceneId": "Basicas_PlantaBaja_CD",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        /*----------Edificio O----------------------------------------------------------------------------------------------------*/
+        /*Edificio_O-PlantaBaja*/
+        "Edificio_O_Quimica": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_Quimica.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 231,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_Redi": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_Redi.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 326,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_Computo": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_Computo.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 0,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A8": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A8.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 140,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A6": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A6.webp",
+            "hotSpots": [
+                {
+                    "pitch": -2,
+                    "yaw": 236,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A5": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A5.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 145,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A3": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A3.webp",
+            "hotSpots": [
+                {
+                    "pitch": -5,
+                    "yaw": 62,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A2": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A2.webp",
+            "hotSpots": [
+                {
+                    "pitch": -4,
+                    "yaw": 273,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        "Edificio_O_A1": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/EdificioO/Edificio_O_A1.webp",
+            "hotSpots": [
+                {
+                    "pitch": -3,
+                    "yaw": 117,
+                    "type": "scene",
+                    "sceneId": "Exterior_CalleEdificio_O",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+        /*----------Domo----------------------------------------------------------------------------------------------------*/
+        "Domo": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Domo/Domo.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw":278,
+                    "type": "info",
+                    "text": "Departamento de Deportes y Cultura",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 90,
+                    "type": "info",
+                    "text": "Departamento de Servicio Social",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 318,
+                    "type": "scene",
+                    "text": "Cancha",
+                    "sceneId": "Domo_Cancha",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -0.6,
+                    "yaw": 45,
+                    "type": "scene",
+                    "text": "Cancha",
+                    "sceneId": "Domo_Cancha",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 115,
+                    "type": "scene",
+                    "sceneId": "Exterior_PasilloDomo2",
+                    "targetYaw": 180,
+                    "targetPitch": 0
+                },
+                {
+                    "pitch": -2.1,
+                    "yaw": 253,
+                    "type": "scene",
+                    "sceneId": "Exterior_PasilloDomo2",
+                    "targetYaw": 180,
+                    "targetPitch": 0
+                }
+            ]
+        },
+        "Domo_Cancha": {
+            "hfov": 120,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "resources/images/Domo/Domo_Cancha.webp",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 56,
+                    "type": "scene",
+                    "text": "Domo",
+                    "sceneId": "Domo",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 120,
+                    "type": "scene",
+                    "text": "Domo",
+                    "sceneId": "Domo",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+        
+    }
+});
+
+// Make buttons work
+document.getElementById('pan-up').addEventListener('click', function(e) {
+    viewer.setPitch(viewer.getPitch() + 10);
+});
+document.getElementById('pan-down').addEventListener('click', function(e) {
+    viewer.setPitch(viewer.getPitch() - 10);
+});
+document.getElementById('pan-left').addEventListener('click', function(e) {
+    viewer.setYaw(viewer.getYaw() - 10);
+});
+document.getElementById('pan-right').addEventListener('click', function(e) {
+    viewer.setYaw(viewer.getYaw() + 10);
+});
+document.getElementById('zoom-in').addEventListener('click', function(e) {
+    viewer.setHfov(viewer.getHfov() - 10);
+});
+document.getElementById('zoom-out').addEventListener('click', function(e) {
+    viewer.setHfov(viewer.getHfov() + 10);
+});
+document.getElementById('fullscreen').addEventListener('click', function(e) {
+    viewer.toggleFullscreen();
+});
+</script>
+
+</body>
+</html>
